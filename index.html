@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máquina de Doces</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="vending-machine">
+        <img src="C:\Coding\MaquinadeDoces\assets\MaquinaDoces.jpeg" alt="Máquina">
+        <h4>Insira Nota/Moeda:</h4>
+        <div class="insert-money">
+            <button onclick="addMoney(1)">R$1,00</button>
+            <button onclick="addMoney(2)">R$2,00</button>
+            <button onclick="addMoney(5)">R$5,00</button>
+        </div>
+        <h4><span id="saldoFeedback" style="color:green;"></span></h4>
+        <h4>Saldo: <span id="saldo">0.00</span></h4>
+        <h4>Escolha o doce:</h4>
+        <div class="doces">
+            <button id="doceA" onclick="selectDoce(6.00)">Doce A</button>
+            <button id="doceB" onclick="selectDoce(7.00)">Doce B</button>
+            <button id="doceC" onclick="selectDoce(8.00)">Doce C</button>
+        </div>
+        <h4><span id="doceSelecionadoFeedback" style="color:green;"></span></h4>
+        <button onclick="buy()">Comprar</button>
+        <div id="output"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
