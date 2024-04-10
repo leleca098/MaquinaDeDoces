@@ -54,6 +54,15 @@ function buy() {
     }, 3000);
 
     updateDoceButtons();
+    enableMoneyButtons(); // Adiciona essa linha para reativar os botões de adicionar dinheiro
+}
+
+function enableMoneyButtons() {
+    if (saldo < 10.00) {
+        document.querySelectorAll('.insert-money button').forEach(button => {
+            button.disabled = false;
+        });
+    }
 }
 
 function updateDoceButtons() {
