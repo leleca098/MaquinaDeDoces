@@ -15,6 +15,7 @@ function addMoney(amount) {
     } else {
         saldo += amount;
         document.getElementById('saldoFeedback').innerText = `Valor inserido: R$${amount.toFixed(2)}`;
+        updateMoneyButtons();
     }
     
     updateSaldoDisplay();
@@ -25,6 +26,16 @@ function addMoney(amount) {
 
     updateDoceButtons();
 }
+
+function updateMoneyButtons() {
+    if (saldo >= 6.00) {
+        document.getElementById('btn5').disabled = true;
+    }
+    if (saldo >= 9.00) {
+        document.getElementById('btn2').disabled = true;
+    }
+}
+
 
 function selectDoce(price) {
     selectedDocePrice = price;
@@ -73,3 +84,4 @@ function updateDoceButtons() {
 
 // Chamamos updateDoceButtons() inicialmente para garantir que os botões de doce estejam corretamente habilitados ou desabilitados no início.
 updateDoceButtons();
+
